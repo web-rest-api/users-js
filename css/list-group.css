@@ -1,0 +1,25 @@
+.list-group {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    border-radius: 6px;
+    border: 1px solid rgb(73, 80, 87);
+
+}
+
+.list-group .list-group-item {
+    padding: 8px 16px;
+    border-bottom: 1px solid rgb(73, 80, 87);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+}
+
+.list-group .list-group-item:last-child {
+    border-bottom: none;
+}
+
+.list-group .list-group-item .list-group-img {
+    margin-left: .3em;
+}
