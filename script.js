@@ -21,7 +21,7 @@ function writeDom(user) {
 	mainImg.src = user.gender === "Male" ? "./assets/02.jpg" : "./assets/01.jpg"
 	// set alt attribute to the user.userName
 	mainImg.setAttribute("alt", user.userName)
-	// apend the image to the div container
+	// append the image to the div container
 	cardImageDiv.appendChild(mainImg)
 
 	//span to show the user.name
@@ -30,13 +30,40 @@ function writeDom(user) {
 	spanName.classList.add("card-title")
 	// add the user.name as content
 	spanName.textContent = user.userName
-	// apend span to the cardImageDiv
+	// append span to the cardImageDiv
 	cardImageDiv.appendChild(spanName)
-
-	// apend elements to the article
+	// append elements to the article
 	article.appendChild(cardImageDiv)
 
-	// apend the article to the container
+	// card content div
+	const cardContent = document.createElement("div")
+	cardContent.classList.add("card-content")
+
+	// ul with class list-group
+	const ulList = document.createElement("ul")
+	ulList.classList.add("list-group")
+
+	// list of li's with each name
+
+	// this works but with more code in it
+	// Object.keys(user.address).forEach((key) => {
+	// 	console.log(`${key}: ${user.address[key]}`)
+	// })
+	// Object.values(user.address).forEach((value) => {
+	// 	const li = document.createElement("li")
+	// 	li.classList.add("list-group-item")
+	// 	li.textContent = value
+	// 	// append each li to the ul
+	// 	ulList.appendChild(li)
+	// })
+	for (let index = 0; index < 6; index++) {
+		console.log("running")
+	}
+	cardContent.appendChild(ulList)
+	// append the ul with all its li's to the container
+	article.appendChild(cardContent)
+
+	// append the article to the container
 	container.appendChild(article)
 
 	// 	container.innerHTML += `
