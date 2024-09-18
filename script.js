@@ -4,6 +4,7 @@ const users = [
 		userName: "Alice",
 		lastName: "Johnson",
 		age: 30,
+		gender: "Female",
 		address: {
 			street: "Oak Avenue",
 			number: 45,
@@ -15,6 +16,7 @@ const users = [
 		userName: "Charlie",
 		lastName: "Smith",
 		age: 27,
+		gender: "Male",
 		address: {
 			street: "Maple Street",
 			number: 101,
@@ -26,6 +28,7 @@ const users = [
 		userName: "Diana",
 		lastName: "Brown",
 		age: 35,
+		gender: "Female",
 		address: {
 			street: "Elm Road",
 			number: 88,
@@ -37,6 +40,7 @@ const users = [
 		userName: "Eve",
 		lastName: "Davis",
 		age: 21,
+		gender: "Female",
 		address: {
 			street: "Birch Lane",
 			number: 7,
@@ -48,6 +52,7 @@ const users = [
 		userName: "Frank",
 		lastName: "Miller",
 		age: 40,
+		gender: "Male",
 		address: {
 			street: "Pine Street",
 			number: 200,
@@ -59,6 +64,7 @@ const users = [
 		userName: "Grace",
 		lastName: "Wilson",
 		age: 28,
+		gender: "Female",
 		address: {
 			street: "Cedar Avenue",
 			number: 99,
@@ -70,6 +76,7 @@ const users = [
 		userName: "Henry",
 		lastName: "Moore",
 		age: 33,
+		gender: "Male",
 		address: {
 			street: "Poplar Road",
 			number: 16,
@@ -81,6 +88,7 @@ const users = [
 		userName: "Ivy",
 		lastName: "Taylor",
 		age: 25,
+		gender: "Female",
 		address: {
 			street: "Willow Street",
 			number: 52,
@@ -92,6 +100,7 @@ const users = [
 		userName: "Jack",
 		lastName: "Anderson",
 		age: 29,
+		gender: "Male",
 		address: {
 			street: "Spruce Avenue",
 			number: 78,
@@ -103,6 +112,7 @@ const users = [
 		userName: "Karen",
 		lastName: "Thomas",
 		age: 37,
+		gender: "Female",
 		address: {
 			street: "Chestnut Street",
 			number: 65,
@@ -114,6 +124,7 @@ const users = [
 		userName: "Leo",
 		lastName: "Harris",
 		age: 22,
+		gender: "Male",
 		address: {
 			street: "Fir Lane",
 			number: 10,
