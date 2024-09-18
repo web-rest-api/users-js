@@ -1,8 +1,38 @@
 # More secure and complex solution
 
-In this solution we use a `forEach` loop with a callback function that executes a function called `writeDom`
-This function takes a parameter called `user`. This is an object with all the information for each user
-Each object looks like this:
+In this solution we there is more separation of concerns, init function and write on dom
+We use a more programatic approach to displaying data on the DOM `document.createElement()`
+We also add attributes by using `classList.add()` and we use a lop for the li items:
+
+```javascript
+// list of li's with each name
+for (let index = 0; index < 4; index++) {
+	const li = document.createElement("li")
+	li.classList.add("list-group-item")
+	// evaluate the content
+	if (index === 0) {
+		li.textContent = `Name: ${user.userName} ${user.lastName}`
+	} else if (index === 1) {
+		li.textContent = `Age: ${user.age}`
+	} else if (index === 2) {
+		li.textContent = `Address:  ${user.address.number} ${user.address.street}`
+		// add icon
+		const iconImg = new Image()
+		iconImg.src = user.address.house
+			? "./assets/house.svg"
+			: "./assets/apart.svg"
+		li.appendChild(iconImg)
+	} else {
+		li.textContent = `Role: ${user.role}`
+	}
+	// append each li to the ul list-group
+	ulList.appendChild(li)
+}
+```
+
+We also add the content based on some conditionals that will display each of the user's data accordingly
+
+The end result is the same but the program is more robust and secure
 
 ```javascript
 {
@@ -18,10 +48,3 @@ Each object looks like this:
     role: "Data Analyst",
 }
 ```
-
-Then we display the data on the DOM
-
-## WARNING !
-
-This is ok for a simple variable that lives in our script.js. However it's not the best practice due to security issues that the innerHTML may allow user to exploit.
-To avoid that, I'll create a new branch in which we populate the DOM in a more programatic way using `document.createElement()`
