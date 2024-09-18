@@ -48,3 +48,5 @@ The end result is the same but the program is more robust and secure
     role: "Data Analyst",
 }
 ```
+
+Finally, we use `import` using Javascript ES6
