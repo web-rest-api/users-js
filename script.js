@@ -134,30 +134,27 @@ const users = [
 	},
 ]
 
-// select container
-const container = document.querySelector(".container")
-
 // function for writing on the DOM
 function writeDom(user) {
-	console.log(user)
-
+	// select container
+	const container = document.querySelector(".container")
 	container.innerHTML += `
 	<article class="card">
 		<div class="card-image">
 			<img src="./assets/01.jpg" alt="user name" />
-			<span class="card-title">Alice</span>
+			<span class="card-title">${user.userName}</span>
 		</div>
 
 		<div class="card-content">
 			<ul class="list-group">
-				<li class="list-group-item"><strong>Name:</strong> ${user.userName}</li>
-				<li class="list-group-item"><strong>Age:</strong> ${user.age}</li>
+				<li class="list-group-item"><strong>Name:</strong>${user.userName}</li>
+				<li class="list-group-item"><strong>Age:</strong>${user.age}</li>
 				<li class="list-group-item">
 					<strong>Address:</strong> 45 Oak Avenue
 					<img class="list-group-img" src="./assets/apart.svg" alt="" />
 				</li>
 				<li class="list-group-item">
-					<strong>Role:</strong> Software Engineer
+					<strong>Role:</strong> ${user.age}
 				</li>
 			</ul>
 		</div>
