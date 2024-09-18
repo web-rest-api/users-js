@@ -1,4 +1,4 @@
-# Simple solution
+# More secure and complex solution
 
 In this solution we use a `forEach` loop with a callback function that executes a function called `writeDom`
 This function takes a parameter called `user`. This is an object with all the information for each user
