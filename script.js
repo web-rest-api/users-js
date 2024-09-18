@@ -141,7 +141,9 @@ function writeDom(user) {
 	container.innerHTML += `
 	<article class="card">
 		<div class="card-image">
-			<img src="./assets/01.jpg" alt="user name" />
+			<img src="./assets/${user.gender === "Male" ? "02.jpg" : "01.jpg"}" alt="${
+		user.userName
+	}" />
 			<span class="card-title">${user.userName}</span>
 		</div>
 
@@ -150,11 +152,13 @@ function writeDom(user) {
 				<li class="list-group-item"><strong>Name:</strong>${user.userName}</li>
 				<li class="list-group-item"><strong>Age:</strong>${user.age}</li>
 				<li class="list-group-item">
-					<strong>Address:</strong> 45 Oak Avenue
-					<img class="list-group-img" src="./assets/apart.svg" alt="" />
+					<strong>Address:</strong> ${user.address.number} ${user.address.street}
+					<img class="list-group-img" src="./assets/${
+						user.address.house ? "house.svg" : "apart.svg"
+					}" alt="user's address" />
 				</li>
 				<li class="list-group-item">
-					<strong>Role:</strong> ${user.age}
+					<strong>Role:</strong> ${user.role}
 				</li>
 			</ul>
 		</div>
