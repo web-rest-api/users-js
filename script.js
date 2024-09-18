@@ -30,6 +30,8 @@ function writeDom(user) {
 	spanName.classList.add("card-title")
 	// add the user.name as content
 	spanName.textContent = user.userName
+	// apend span to the cardImageDiv
+	cardImageDiv.appendChild(spanName)
 
 	// apend elements to the article
 	article.appendChild(cardImageDiv)
