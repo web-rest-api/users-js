@@ -44,20 +44,28 @@ function writeDom(user) {
 	ulList.classList.add("list-group")
 
 	// list of li's with each name
-
-	// this works but with more code in it
-	// Object.keys(user.address).forEach((key) => {
-	// 	console.log(`${key}: ${user.address[key]}`)
-	// })
-	// Object.values(user.address).forEach((value) => {
-	// 	const li = document.createElement("li")
-	// 	li.classList.add("list-group-item")
-	// 	li.textContent = value
-	// 	// append each li to the ul
-	// 	ulList.appendChild(li)
-	// })
-	for (let index = 0; index < 6; index++) {
+	for (let index = 0; index < 4; index++) {
 		console.log("running")
+		const li = document.createElement("li")
+		li.classList.add("list-group-item")
+		// evaluate the content
+		if (index === 0) {
+			li.textContent = `Name: ${user.userName} ${user.lastName}`
+		} else if (index === 1) {
+			li.textContent = `Age: ${user.age}`
+		} else if (index === 2) {
+			li.textContent = `Address:  ${user.address.number} ${user.address.street}`
+			// add icon
+			const iconImg = new Image()
+			iconImg.src = user.address.house
+				? "./assets/house.svg"
+				: "./assets/apart.svg"
+			li.appendChild(iconImg)
+		} else {
+			li.textContent = `Role: ${user.role}`
+		}
+		// append each li to the ul list-group
+		ulList.appendChild(li)
 	}
 	cardContent.appendChild(ulList)
 	// append the ul with all its li's to the container

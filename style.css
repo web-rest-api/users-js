@@ -43,3 +43,7 @@ svg {
     left: 35%;
     right: 0%;
 }
+
+.strong {
+    font-weight: bold;
+}
