@@ -24,6 +24,13 @@ function writeDom(user) {
 	// apend the image to the div container
 	cardImageDiv.appendChild(mainImg)
 
+	//span to show the user.name
+	const spanName = document.createElement("span")
+	// add the class spanName to the span
+	spanName.classList.add("card-title")
+	// add the user.name as content
+	spanName.textContent = user.userName
+
 	// apend elements to the article
 	article.appendChild(cardImageDiv)
 
