@@ -8,8 +8,27 @@ function writeDom(user) {
 
 	// create article using createElement()
 	const article = document.createElement("article")
+	// add class
+	article.classList.add("card")
 
-	console.log(article)
+	// create car-image div
+	const cardImageDiv = document.createElement("div")
+	cardImageDiv.classList.add("card-image")
+
+	// main image
+	const mainImg = new Image()
+	// add the image src attribute
+	mainImg.src = user.gender === "Male" ? "./assets/02.jpg" : "./assets/01.jpg"
+	// set alt attribute to the user.userName
+	mainImg.setAttribute("alt", user.userName)
+	// apend the image to the div container
+	cardImageDiv.appendChild(mainImg)
+
+	// apend elements to the article
+	article.appendChild(cardImageDiv)
+
+	// apend the article to the container
+	container.appendChild(article)
 
 	// 	container.innerHTML += `
 	// 	<article class="card">
