@@ -123,4 +123,57 @@ const users = [
 	},
 ]
 
-console.log("hello")
+// select container
+const container = document.querySelector(".container")
+
+// write on the DOM
+writeDom()
+
+// function for writing on the DOM
+function writeDom() {
+	container.innerHTML = `
+	<article class="card">
+		<div class="card-image">
+			<img src="./assets/01.jpg" alt="user name" />
+			<span class="card-title">Alice</span>
+		</div>
+
+		<div class="card-content">
+			<ul class="list-group">
+				<li class="list-group-item"><strong>Name:</strong> Alice</li>
+				<li class="list-group-item"><strong>Age:</strong> 30</li>
+				<li class="list-group-item">
+					<strong>Address:</strong> 45 Oak Avenue
+					<img class="list-group-img" src="./assets/apart.svg" alt="" />
+				</li>
+				<li class="list-group-item">
+					<strong>Role:</strong> Software Engineer
+				</li>
+			</ul>
+		</div>
+	</article>
+`
+}
+
+/*
+FOREACH
+slower
+easier to read / less code
+callback function
+users.forEach((user) => {
+	console.log(user)
+})
+*/
+
+/*
+FOR
+faster
+more control
+no callback function
+for (let index = 0; index < users.length; index++) {
+	const element = users[index]
+	console.log(element)
+}
+*/
+
+/*  FOR/OF  */
