@@ -45,7 +45,6 @@ function writeDom(user) {
 
 	// list of li's with each name
 	for (let index = 0; index < 4; index++) {
-		console.log("running")
 		const li = document.createElement("li")
 		li.classList.add("list-group-item")
 		// evaluate the content
