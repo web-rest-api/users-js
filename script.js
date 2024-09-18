@@ -102,29 +102,11 @@ function writeDom(user) {
 	// `
 }
 
-users.forEach((user) => {
-	writeDom(user)
-})
-
-/*
-FOREACH
-slower
-easier to read / less code
-callback function
-users.forEach((user) => {
-	console.log(user)
-})
-*/
-
-/*
-FOR
-faster
-more control
-no callback function
-for (let index = 0; index < users.length; index++) {
-	const element = users[index]
-	console.log(element)
+// init functioin
+function init() {
+	users.forEach((user) => {
+		writeDom(user)
+	})
 }
-*/
 
-/*  FOR/OF  */
+init()
