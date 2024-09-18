@@ -137,12 +137,11 @@ const users = [
 // select container
 const container = document.querySelector(".container")
 
-// write on the DOM
-writeDom()
-
 // function for writing on the DOM
-function writeDom() {
-	container.innerHTML = `
+function writeDom(user) {
+	console.log(user)
+
+	container.innerHTML += `
 	<article class="card">
 		<div class="card-image">
 			<img src="./assets/01.jpg" alt="user name" />
@@ -151,8 +150,8 @@ function writeDom() {
 
 		<div class="card-content">
 			<ul class="list-group">
-				<li class="list-group-item"><strong>Name:</strong> Alice</li>
-				<li class="list-group-item"><strong>Age:</strong> 30</li>
+				<li class="list-group-item"><strong>Name:</strong> ${user.userName}</li>
+				<li class="list-group-item"><strong>Age:</strong> ${user.age}</li>
 				<li class="list-group-item">
 					<strong>Address:</strong> 45 Oak Avenue
 					<img class="list-group-img" src="./assets/apart.svg" alt="" />
@@ -165,6 +164,10 @@ function writeDom() {
 	</article>
 `
 }
+
+users.forEach((user) => {
+	writeDom(user)
+})
 
 /*
 FOREACH
